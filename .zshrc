@@ -105,10 +105,9 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias vim="nvim" 
-alias vi="nvim"
+# alias vim="nvim" 
+# alias vi="nvim"
 alias cdd="cd ~/Documents/repos/Learn"
-alias cdm="cd ~/.config/nvim && nvim"
+alias cdn="cd ~/.config/nvim && nvim"
 alias cm="cmake ../ && make"
 alias bdc="mkdir project && cd project && mkdir build && mkdir src && touch CMakeLists.txt && mkdir lib && cd lib && mkdir include && cd .."
-# alias buildc="mkdir project && cd project && mkdir build && mkdir src && touch CMakeLists.txt && mkdir include"
