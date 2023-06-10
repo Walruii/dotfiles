@@ -53,6 +53,7 @@ ZSH_THEME="agnoster"
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
+unsetopt beep
 
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
@@ -105,9 +106,13 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-# alias vim="nvim" 
-# alias vi="nvim"
+alias vim="nvim" 
+alias vi="nvim"
 alias cdd="cd ~/Documents/repos/Learn"
-alias cdn="cd ~/.config/nvim && nvim"
+alias envim="cd ~/.config/nvim/lua/core && nvim"
+alias ezsh="cd && nvim .zshrc"
+alias ehypr="cd ~/.config/hypr && nvim hyprland.conf"
 alias cm="cmake ../ && make"
 alias bdc="mkdir project && cd project && mkdir build && mkdir src && touch CMakeLists.txt && mkdir lib && cd lib && mkdir include && cd .."
+alias brow="browser-sync start --server --files \"*.css\" \"*.html\" \"css/*.css\" \"public/*.html\""
+# alias buildc="mkdir project && cd project && mkdir build && mkdir src && touch CMakeLists.txt && mkdir include"
