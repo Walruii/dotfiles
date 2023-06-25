@@ -1,0 +1,60 @@
+{
+  "layer": "top",
+    "modules-left": ["custom/arch", "wlr/workspaces"],
+    "modules-center": ["clock"],
+    "modules-right": ["backlight", "pulseaudio", "bluetooth", "network", "battery"],
+    "custom/arch": {
+      "format": "  ",
+      "tooltip": false,
+      "on-click": "sh $HOME/.config/rofi/bin/powermenu"
+    },
+    "wlr/workspaces": {
+      "format": "{name}",
+      "format": "{icon}",
+      "tooltip": false,
+      "all-outputs": true,
+      "format-icons": {
+        "active": "",
+        "default": ""
+      }
+    },
+    "clock": {
+      "format": "<span color='#d4a299'> </span>{:%I:%M}",
+    },
+    "backlight": {
+      "device": "intel_backlight",
+      "format": "<span color='#d4a299'>{icon}</span> {percent}%",
+      "format-icons": ["", "", "", "", "", "", "", "", ""]
+    },
+    "pulseaudio": {
+      "format": "<span color='#d4a299'>{icon}</span> {volume}%",
+      "format-muted": "",
+      "tooltip": false,
+      "format-icons": {
+        "headphone": "",
+        "default": ["", "", "󰕾", "󰕾", "󰕾", "", "", ""]
+      },
+      "scroll-step": 1,
+    },
+    "bluetooth": {
+      "format": "<span color='#d4a299'></span> {status}",
+      "format-disabled": "", // an empty format will hide the module
+      "format-connected": "<span color='#d4a299'></span> {num_connections}",
+      "tooltip-format": "{device_enumerate}",
+      "tooltip-format-enumerate-connected": "{device_alias}   {device_address}"
+    },
+    "network": {
+      "interface": "wlo1",
+      "format": "{ifname}",
+      "format-wifi": "<span color='#d4a299'> </span>{essid}",
+      "format-ethernet": "{ipaddr}/{cidr} ",
+      "format-disconnected": "<span color='#d4a299'>󰖪 </span>No Network",
+      "tooltip": false,
+    },
+    "battery": {
+      "format": "<span color='#d4a299'>{icon}</span> {capacity}%",
+      "format-icons": ["", "", "", "", "", "", "", "", "", ""],
+      "format-charging": "<span color='#d4a299'></span> {capacity}%",
+      "tooltip": false,
+    },
+}
