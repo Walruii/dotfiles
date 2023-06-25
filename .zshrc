@@ -8,7 +8,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="agnoster"
+ZSH_THEME="daivasmara"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -106,8 +106,9 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias vim="nvim" 
 alias vi="nvim"
+alias vim="nvim"
+alias "cd"="z"
 alias cdd="cd ~/Documents/repos/Learn"
 alias envim="cd ~/.config/nvim/lua/core && nvim"
 alias ezsh="cd && nvim .zshrc"
@@ -116,3 +117,7 @@ alias cm="cmake ../ && make"
 alias bdc="mkdir project && cd project && mkdir build && mkdir src && touch CMakeLists.txt && mkdir lib && cd lib && mkdir include && cd .."
 alias brow="browser-sync start --server --files \"*.css\" \"*.html\" \"css/*.css\" \"public/*.html\""
 # alias buildc="mkdir project && cd project && mkdir build && mkdir src && touch CMakeLists.txt && mkdir include"
+#
+eval "$(zoxide init zsh)"
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
