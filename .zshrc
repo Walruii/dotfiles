@@ -9,6 +9,7 @@ export ZSH="$HOME/.oh-my-zsh"
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 ZSH_THEME="daivasmara"
+#daivasmara
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -77,6 +78,7 @@ plugins=(
     zsh-autosuggestions
     zsh-syntax-highlighting
     auto-notify
+    web-search
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -113,9 +115,11 @@ alias cdd="cd ~/Documents/repos/Learn"
 alias envim="cd ~/.config/nvim/lua/core && nvim"
 alias ezsh="cd && nvim .zshrc"
 alias ehypr="cd ~/.config/hypr && nvim hyprland.conf"
+alias srctmux="tmux source ~/.config/tmux/tmux.conf"
+alias srczsh="source ~/.zshrc"
 alias cm="cmake ../ && make"
 alias bdc="mkdir project && cd project && mkdir build && mkdir src && touch CMakeLists.txt && mkdir lib && cd lib && mkdir include && cd .."
-alias brow="browser-sync start --server --files \"*.css\" \"*.html\" \"css/*.css\" \"public/*.html\""
+alias brow="browser-sync start --server --files \"*.css\" \"*.html\" \"css/*.css\" \"public/*.html\" --no-open --no-ui"
 # alias buildc="mkdir project && cd project && mkdir build && mkdir src && touch CMakeLists.txt && mkdir include"
 #
 eval "$(zoxide init zsh)"
