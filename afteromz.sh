@@ -11,8 +11,8 @@ mv ~/dotfiles/tmux ~/.config/
 source ~/.zshrc
 tmux source ~/.config/tmux/tmux.conf
 mv ~/.config/tmux/dark_plus_default.conf ~/.config/tmux/plugins/tmux-dark-plus-theme
-cd ~
+cd ~ || exit 1;
 rm -rf yay
 rm -rf dotfiles
 clear
-echo "gh auth login -- login into git"
+echo "gh auth login -- login into git and install fd"

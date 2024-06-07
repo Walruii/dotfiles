@@ -5,17 +5,16 @@ var=$(grep ID_LIKE /etc/os-release)
 packages="git neovim zip unzip zoxide gcc zsh nodejs python3 tmux lua npm"
 # gh
 
-
 if [[ "$var" == *"ID_LIKE=debian"* ]]; then
   # if debian based then update it
   sudo apt-get update
-  sudo apt-get install -y $packages gh 
-else 
+  sudo apt-get install -y $packages gh
+else
   # then it is arch so update that
-  sudo pacman -Syu --noconfirm --needed base-devel $packages github-cli 
+  sudo pacman -Syu --noconfirm --needed base-devel $packages github-cli
   git clone https://aur.archlinux.org/yay.git ~/yay
   cd ~/yay && makepkg -si
-  cd ~/dotfiles
+  cd ~/dotfiles || exit 1;
 fi
 
 # install nodejs / language support
