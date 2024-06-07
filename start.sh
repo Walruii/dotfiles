@@ -18,7 +18,7 @@ sudo npm install -g npm@latest
 sudo npm install -g vscode-langservers-extracted typescript typescript-language-server @tailwindcss/language-server
 
 # config files for nvim and zsh
-git clone https://github.com/walruii/nvim-arch.git ~/.config/nvim
+git clone https://github.com/walruii/arch-nvim.git ~/.config/nvim
 git clone https://github.com/walruii/dotfiles.git ~/.config/dotfiles
 mv ~/.config/dotfiles/.zshrc ~/
 
