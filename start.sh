@@ -9,10 +9,10 @@ packages="git neovim zip unzip zoxide gcc zsh nodejs python3 tmux lua npm"
 if [[ "$var" == *"ID_LIKE=debian"* ]]; then
   # if debian based then update it
   sudo apt-get update
-  sudo apt-get install -y $packages
+  sudo apt-get install -y $packages gh
 else 
   # then it is arch so update that
-  sudo pacman -Syu --noconfirm $packages
+  sudo pacman -Syu --noconfirm $packages github-cli
 fi
 
 # install nodejs / language support
