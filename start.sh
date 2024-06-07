@@ -13,9 +13,9 @@ if [[ "$var" == *"ID_LIKE=debian"* ]]; then
 else 
   # then it is arch so update that
   sudo pacman -Syu --noconfirm --needed base-devel $packages github-cli 
-  git clone https://aur.archlinux.org/yay.git ~/
+  git clone https://aur.archlinux.org/yay.git ~/yay
   cd ~/yay && makepkg -si
-  cd ~
+  cd ~/dotfiles
 fi
 
 # install nodejs / language support
