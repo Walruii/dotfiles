@@ -2,8 +2,8 @@
 
 # getting the os
 var=$(grep ID_LIKE /etc/os-release)
-packages="git neovim zip unzip zoxide gcc zsh nodejs python3 tmux"
-# lua5.4 man clangd gh
+packages="git neovim zip unzip zoxide gcc zsh nodejs python3 tmux lua npm"
+# gh
 
 
 if [[ "$var" == *"ID_LIKE=debian"* ]]; then
